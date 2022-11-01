@@ -1,38 +1,92 @@
 .App {
   text-align: center;
+  font-size: 1.3em;
+  font-weight: 300;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#profile__img {
+  width: 30vw;
+  height: auto;
+  border-radius: 50%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* #slack{
+  display: hidden;
+} */
+.App {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column nowrap;
+  width: 100vw;
+}
+#profile_section {
+  margin-top: 50px;
+  padding: 30px auto;
+}
+main{
+  display: flex;
+  flex-flow: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 30px;
+
+}
+main > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  background: #EAECF0;
+  width: 70vw;
+  height: 40px;
+}
+#end_logo > a{
+  padding: 60px 50px 40px 40px;
+
+}
+footer{
+  text-decoration: none;
+  padding: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 200;
 }
 
-.App-link {
-  color: #61dafb;
+
+main > a:hover{
+  border: 3px solid #a5a6a8;
+}
+main > a:{
+  border: 3px solid #a5a6a8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+@media only screen and (max-width: 400px) {
+  .App {
+      font-size: 0.9rem;
   }
-  to {
-    transform: rotate(360deg);
+  footer{
+    display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+}
+
+@media only screen and (max-width: 900px) {
+  .App {
+      font-size: 1rem;
   }
+  footer{
+    display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
 }
