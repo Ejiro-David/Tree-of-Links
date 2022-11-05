@@ -2,13 +2,13 @@ import "./App.css";
 import selfie from "./images/me.jpeg";
 import github from "./images/github.png";
 import slack from "./images/slack.png";
-import hng9 from "./images/I4G.png"
-import i4g from "./images/Vector.png"
-import Contact from "./Contact";
+import hng9 from "./images/I4G.png";
+import i4g from "./images/Vector.png";
+import Contact from "./Contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function Home(){
+function Home() {
   return (
     <div>
       <header id="profile_section">
@@ -19,22 +19,13 @@ function Home(){
         <p id="slack" hidden>
           Slack: <a href="www.slack.com">Ejiro David</a>
         </p>
-
       </header>
       <main id="links_section">
-        <a
-          class="button"
-          href="https://training.zuri.team/"
-          id="btn__zuri"
-        >
+        <a class="button" href="https://training.zuri.team/" id="btn__zuri">
           Zuri Training
         </a>
         <br></br>
-        <a
-          class="button"
-          href="http://books.zuri.team/"
-          id="books"
-        >
+        <a class="button" href="http://books.zuri.team/" id="books">
           Design and Coding Books(add subtext)
         </a>
         <br></br>
@@ -46,11 +37,7 @@ function Home(){
           A comprehensive guide to learning python in a project based way
         </a>
         <br></br>
-        <a
-          class="button"
-          href="https://background.zuri.team"
-          id="pitch"
-        >
+        <a class="button" href="https://background.zuri.team" id="pitch">
           Do a background check on your programmers
         </a>
         <br></br>
@@ -60,14 +47,12 @@ function Home(){
           id="book__design"
         >
           But the best free design book ever from Zuri
-        </a><br></br>
-        <Link
-          class="button"
-          to="/contact"
-          id="contact"
-        >
+        </a>
+        <br></br>
+        <Link class="button" to="/contact" id="contact">
           Contact
-        </Link><br></br>
+        </Link>
+        <br></br>
         <div id="end_logo">
           <a href="slack">
             <img alt="slack_svg" src={slack}></img>
@@ -78,22 +63,20 @@ function Home(){
         </div>
       </main>
       <footer>
-          <img alt="zuri_svg" src={i4g}></img>
-        <p>
-        HNG Internship 9 Frontend Task
-        </p>
-          <img alt="hng9" src={hng9}></img> 
+        <img alt="zuri_svg" src={i4g}></img>
+        <p>HNG Internship 9 Frontend Task</p>
+        <img alt="hng9" src={hng9}></img>
       </footer>
     </div>
-  )
+  );
 }
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
