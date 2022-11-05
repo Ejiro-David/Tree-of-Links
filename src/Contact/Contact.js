@@ -62,12 +62,12 @@ function Contact() {
             <input type="checkbox" id="consent" name="consent" value="" />
             <br></br>
             <label for="consent">
-              You agree to providing your data to name who may contact you.
+              You agree to providing your data to whoever may contact you.
             </label>
             <br></br>
           </div>
           <br></br>
-          <button id="btn__submit" onClick={"xx"}>
+          <button id="btn__submit" onClick={'fake submit'}>
             Send Message
           </button>
         </form>
