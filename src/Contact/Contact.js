@@ -18,7 +18,7 @@ function Contact() {
               name="fname"
               type="text"
               required
-              value="Enter your first name"
+              placeholder="Enter your first name"
               id="first_name"
             />
             <br></br>
@@ -29,7 +29,7 @@ function Contact() {
               name="lname"
               type="text"
               required
-              value="Enter your last name"
+              placeholder="Enter your last name"
               id="last_name"
             />
             <br></br>
@@ -41,7 +41,7 @@ function Contact() {
               name="email"
               type="email"
               required
-              value="yourname@email.com"
+              placeholder="yourname@email.com"
               id="email"
             />
             <br></br>
@@ -52,14 +52,14 @@ function Contact() {
             <textarea
               type="text"
               required
-              value="Send me a message and I'll reply you as soon as possible..."
+              placeholder="Send me a message and I'll reply you as soon as possible..."
               id="message"
             />
             <br></br>
           </div>
 
-          <div className="input-cont">
-            <input type="radio" id="consent" name="consent" value="" />
+          <div className="input-cont" id="consent-cont" >
+            <input type="checkbox" id="consent" name="consent" value="" />
             <br></br>
             <label for="consent">
               You agree to providing your data to name who may contact you.
@@ -68,7 +68,7 @@ function Contact() {
           </div>
           <br></br>
           <button id="btn__submit" onClick={"xx"}>
-            Submit
+            Send Message
           </button>
         </form>
       </main>
