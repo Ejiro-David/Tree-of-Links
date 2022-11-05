@@ -4,12 +4,13 @@ import github from "./images/github.png";
 import slack from "./images/slack.png";
 import hng9 from "./images/I4G.png"
 import i4g from "./images/Vector.png"
+import Contact from "./Contact";
+import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-
-
-function App() {
+function Home(){
   return (
-    <div className="App">
+    <div>
       <header id="profile_section">
         <img alt="David Ejiro" id="profile__img" src={selfie}></img>
         <p id="twitter">
@@ -60,6 +61,13 @@ function App() {
         >
           But the best free design book ever from Zuri
         </a><br></br>
+        <Link
+          class="button"
+          to="/contact"
+          id="contact"
+        >
+          Contact
+        </Link><br></br>
         <div id="end_logo">
           <a href="slack">
             <img alt="slack_svg" src={slack}></img>
@@ -76,6 +84,17 @@ function App() {
         </p>
           <img alt="hng9" src={hng9}></img> 
       </footer>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+      </Routes>
     </div>
   );
 }
